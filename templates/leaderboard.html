@@ -1,0 +1,24 @@
+{% extends "layout.html" %}   // Inherits all the components from base template, including the header and footer
+
+{% block content %}
+<div class="main_content m-5">
+  <table class="table table-secondary table-striped-columns ">
+    <tr class="table-primary">
+      <tr>
+        <th class="table-primary">Username</th>
+        <th class="table-primary">Link</th>
+        <th class="table-primary">difficulty</th>
+      </tr>
+    </tr>
+    {%for user in user_dis%}
+    <tr class="table-primary">
+      <tr>
+        <td class="table-light">{{user.question_name}}</td>
+        <td class="table-light">{{user.link}}</td>
+        <td class="table-light">{{user.difficulty}}</td>
+      </tr>
+    </tr>
+    {%endfor%}
+  </table>
+</div>  
+{% endblock %}
